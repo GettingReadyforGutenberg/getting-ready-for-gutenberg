@@ -1,0 +1,374 @@
+/*!
+Theme Name: Getting Ready For Gutenberg
+Theme URI: 
+Author: GettingReady For Gutenberg
+Author URI: gettingreadyforgutenberg.com
+Description: Custom theme: Getting Ready For Gutenberg, developed by GettingReady For Gutenberg
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: getting-ready-for-gutenberg
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Getting Ready For Gutenberg is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+body {
+    color: #4A4A4A;
+    font-family: 'Noto Serif', serif;
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.left {
+    float:left;
+}
+
+.right {
+    float:right;
+}
+
+.clear {
+    clear:both;
+}
+
+.blue-band {
+    border: 15px solid #00B2DF;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4.25rem;
+    font-weight: 700;
+    margin: 5% auto;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: auto;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 3%;
+}
+
+a:active, a:link, a:visited {
+    color: #00B2DF;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+a:hover {
+    font-style: italic;
+    text-decoration: none;
+}
+
+.gutenberg-img {
+    width: 100%;
+}
+
+h2 {
+    font-weight: 700;
+    margin: 3% 0;
+    text-align: center;
+}
+
+.content-sections {
+    margin-bottom: 8%;
+}
+
+footer {
+    background: #4a4a4a;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 1.5%;
+    text-align: center;
+}
+
+.entry-meta {
+	text-align:center;
+	margin-bottom: 3%;
+	font-size: 1.4rem;
+}
+
+.comments-area {
+	padding: 5%;
+	background: #fafafa;
+	margin: 8% auto;
+}
+
+.comments-title, .comment-reply-title {
+	font-size: 1.8rem;
+	text-align: left;
+}
+
+.comment-list {
+	list-style-type: none;
+	list-style-position: outside;
+	padding: 0;
+}
+
+.children {
+	list-style-type: none;
+	list-style-position: outside;
+}
+
+.comment-body {
+	border-bottom: 1px solid #d6d6d6;
+	padding-bottom: 4%;
+}
+
+.comment-meta {
+	background: transparent;
+	text-align: left;
+	color: #4a4a4a;
+}
+
+.comment-notes {
+	font-size: 1rem;
+}
+
+.comment-form-comment > label {
+	width: 100%;
+}
+
+
+.comment-form-comment > textarea {
+	border: 1px solid #EEE;
+	resize: none;
+	width: 100%;
+}
+
+.post {
+	margin: 8% auto;
+	padding-bottom: 4%;
+	border-bottom: 1px solid #d6d6d6;
+}
+
+.single-post .post {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+.updated {
+	display: none;
+}
+
+.entry-title a {
+	color: #4a4a4a;
+	font-style: normal;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.post .entry-title {
+	font-size: 3rem;
+	margin: 2% auto;
+}
+
+.post p {
+	margin: 1.5% auto;
+}
+
+.wp-block-image > img, .featured-image > img {
+	width: 100%;
+}
+
+@media screen and (min-width: 460px) and (max-width:768px) {
+    h1 {
+        font-size: 3.25rem;
+    }
+
+    h2 {
+        font-size: 2.75rem;
+        line-height: 1.5;
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (max-width:459px) {
+    h1 {
+        font-size: 2.75rem;
+        line-height: 1.5;
+        margin-bottom: 5%;
+    }
+
+    h2 {
+        font-size: 2rem;
+        line-height: 1.5;
+        margin-bottom: 5%;
+    }
+
+    p, ul {
+        font-size: 1.6rem;
+    }
+
+    ul {
+        font-size: 1.6rem;
+        padding: 0;
+        padding-bottom: 5%;
+    }
+
+    ul li {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float:right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%;
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+}
+.sticky {}
+/* Gallery widget */
+.gallery-columns-5 .gallery-caption,
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+    display: none;
+}
+
+/* bypostauthor */
+.bypostauthor > .comment-body > .comment-meta > .comment-author .avatar {
+    border: 1px solid #333;
+    padding: 2px;
+}
